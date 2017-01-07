@@ -14,7 +14,11 @@ def algoinfo():
         infofile.close()
         soup=BeautifulSoup(infohtm,'html.parser')
         p=soup.find_all('p')
-        print p[0].text
+        if x=='https://en.wikipedia.org/wiki/Merge_sort':
+            print p[1].text
+        else:
+            print p[0].text
+        
 
 if __name__ == '__main__':
     algoinfo()
